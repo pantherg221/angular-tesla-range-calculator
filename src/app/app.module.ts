@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
+// Features module
+import { TeslaBatteryModule } from './tesla-battery/tesla-battery.module';
+
+// app components
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -11,10 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule
+    // include TeslaBatteryModule
+    TeslaBatteryModule
   ],
   providers: [],
+  // bootstrap the AppComponent
   bootstrap: [AppComponent]
 })
 export class AppModule { }
